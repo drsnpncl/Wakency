@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="projects">
+      <EntityTypeMapping TypeName="Model.project">
+        <MappingFragment StoreEntitySet="projects">
+          <ScalarProperty Name="proj_id" ColumnName="proj_id" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="duration" ColumnName="duration" />
+          <ScalarProperty Name="descr" ColumnName="descr" />
+          <ScalarProperty Name="attachment" ColumnName="attachment" />
+          <ScalarProperty Name="req_languages" ColumnName="req_languages" />
+          <ScalarProperty Name="posted_by" ColumnName="posted_by" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

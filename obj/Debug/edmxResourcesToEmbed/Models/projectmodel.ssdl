@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="projects">
+    <Key>
+      <PropertyRef Name="proj_id" />
+    </Key>
+    <Property Name="proj_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="title" Type="varchar" MaxLength="50" />
+    <Property Name="price" Type="int" />
+    <Property Name="duration" Type="int" />
+    <Property Name="descr" Type="varchar(max)" />
+    <Property Name="attachment" Type="varchar" MaxLength="50" />
+    <Property Name="req_languages" Type="varchar(max)" />
+    <Property Name="posted_by" Type="int" />
+  </EntityType>
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="projects" EntityType="Self.projects" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,100 @@
+﻿@model Wakency.Models.job
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>job</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.title, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.title)
+                @Html.ValidationMessageFor(model => model.title)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.company, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.company)
+                @Html.ValidationMessageFor(model => model.company)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.job_desc, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.job_desc)
+                @Html.ValidationMessageFor(model => model.job_desc)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.package, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.package)
+                @Html.ValidationMessageFor(model => model.package)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.posted_by, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.posted_by)
+                @Html.ValidationMessageFor(model => model.posted_by)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.attachment, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.attachment)
+                @Html.ValidationMessageFor(model => model.attachment)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.location, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.location)
+                @Html.ValidationMessageFor(model => model.location)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.job_type, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.job_type)
+                @Html.ValidationMessageFor(model => model.job_type)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.requirements, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.requirements)
+                @Html.ValidationMessageFor(model => model.requirements)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

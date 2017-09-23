@@ -1,0 +1,89 @@
+﻿@model Wakency.Models.project
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>project</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.title, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.title)
+                @Html.ValidationMessageFor(model => model.title)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.price, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.price)
+                @Html.ValidationMessageFor(model => model.price)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.duration, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.duration)
+                @Html.ValidationMessageFor(model => model.duration)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.descr, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.descr)
+                @Html.ValidationMessageFor(model => model.descr)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.attachment, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.attachment)
+                @Html.ValidationMessageFor(model => model.attachment)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.req_languages, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.req_languages)
+                @Html.ValidationMessageFor(model => model.req_languages)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.posted_by, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.posted_by)
+                @Html.ValidationMessageFor(model => model.posted_by)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

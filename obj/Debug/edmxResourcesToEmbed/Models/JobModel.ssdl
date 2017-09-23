@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="JobModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="jobs">
+    <Key>
+      <PropertyRef Name="job_id" />
+    </Key>
+    <Property Name="job_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="title" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="company" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="job_desc" Type="varchar(max)" />
+    <Property Name="package" Type="varchar" MaxLength="50" />
+    <Property Name="posted_by" Type="varchar" MaxLength="50" />
+    <Property Name="attachment" Type="varchar(max)" />
+    <Property Name="location" Type="varchar" MaxLength="50" />
+    <Property Name="job_type" Type="varchar" MaxLength="50" />
+    <Property Name="requirements" Type="varchar(max)" />
+  </EntityType>
+  <EntityContainer Name="JobModelStoreContainer">
+    <EntitySet Name="jobs" EntityType="Self.jobs" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
